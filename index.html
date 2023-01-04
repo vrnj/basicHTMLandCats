@@ -4,57 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
     <title>Basic HTML/CSS</title>
     <style>
         .red-text {
             color: red;
         }
     
+        h2 {
+            font-family: Lobster, monospace;
+        }
+    
         p {
             font-size: 16px;
-            font-family: monospace;;
+            font-family: monospace;
+        }
+    
+        .thick-green-border {
+            border-color: green;
+            border-width: 10px;
+            border-style: solid;
+        }
+    
+        .smaller-image {
+            border-radius: 10px;
+            width: 100px;
         }
     </style>
+
 </head>
 <body>
     
     <h2 class="red-text">CatPhotoApp</h2>
     <main>
-        <p>Click here to view more <a href="#"><img
-                    src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
-                    alt="A cute orange cat lying on its back."></a>.</p>
+        <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
     
+        <a href="#"><img class="smaller-image thick-green-border"
+                src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+                alt="A cute orange cat lying on its back."></a>
     
+        <div>
+            <p>Things cats love:</p>
+            <ul>
+                <li>cat nip</li>
+                <li>laser pointers</li>
+                <li>lasagna</li>
+            </ul>
+            <p>Top 3 things cats hate:</p>
+            <ol>
+                <li>flea treatment</li>
+                <li>thunder</li>
+                <li>other cats</li>
+            </ol>
+        </div>
     
-        <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot,
-            hairball run catnip eat the grass sniff.</p>
-        <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy
-            fur catnip scratched.</p>
-
-        <h3>Top Things Cats Love</h3>
-        
-        <ul>
-            <li>sleep</li>
-            <li>warmth</li>
-            <li>fish</li>
-        </ul>
-
-        <h4>Top Things Cats Hate</h4>
-
-        <ol>
-            <li>loud noises</li>
-            <li>water</li>
-            <li>dogs</li>
-        </ol>
-
-        <form action="https://www.freecatphotoapp.com/submit-cat-photo">
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+            <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+            <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
+            <label><input type="checkbox" name="personality" checked> Loving</label>
+            <label><input type="checkbox" name="personality"> Lazy</label>
+            <label><input type="checkbox" name="personality"> Energetic</label><br>
             <input type="text" placeholder="cat photo URL" required>
-            <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor"> Indoor</label>
-            <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor"> Outdoor</label><br>
-            <input type="text" placeholder="cat photo URL" required>
-            <label for="playful"><input id="playful" type="checkbox" name="personality"> Playful</label>
-            <label for="playful"><input id="caring" type="checkbox" name="personality"> Caring</label>
-            <label for="playful"><input id="soft" type="checkbox" name="personality"> Soft</label>
             <button type="submit">Submit</button>
         </form>
     </main>
